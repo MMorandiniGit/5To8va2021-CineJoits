@@ -1,7 +1,7 @@
 <!-- Completa abajo cambiando ET12DE1Computacion a tu user|organización y template a tu repo, te recomiendo usar el Find & Replace de tu editor -->
-![main build.NET5](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/main-build.NET5/badge.svg?branch=main) ![main test.NET5](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/main-test.NET5/badge.svg?branch=main)
-![dev build.NET5](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/dev-build.NET5/badge.svg?branch=dev) ![dev test.NET5](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/dev-test.NET5/badge.svg?branch=dev)
-[![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/ET12DE1Computacion/simpleTemplateCSharp)
+![main build.NET5](https://github.com/MMorandiniGit/5To8va2021-CineJoits/workflows/main-build.NET5/badge.svg?branch=main) ![main test.NET5](https://github.com/MMorandiniGit/5To8va2021-CineJoits/workflows/main-test.NET5/badge.svg?branch=main)
+![dev build.NET5](https://github.com/MMorandiniGit/5To8va2021-CineJoits/workflows/dev-build.NET5/badge.svg?branch=dev) ![dev test.NET5](https://github.com/MMorandiniGit/5To8va2021-CineJoits/workflows/dev-test.NET5/badge.svg?branch=dev)
+[![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/MMorandiniGit/5To8va2021-CineJoits)
 <!-- Borra este comentario y linea después haber cambiado arriba las ocurrencias de tu usuario/repo -->
 
 <h1 align="center">E.T. Nº12 D.E. 1º "Libertador Gral. José de San Martín"</h1>
@@ -15,7 +15,7 @@
 
 **Nombre TP**: Cine Joits
 
-**Apellido y nombre Alumno**: Morandini Martin
+**Apellido y nombre Alumno**: Morandini Martin, Alejandro Carrasco
 
 **Curso**: 5to 8va
 
@@ -26,9 +26,8 @@ _Acá va un párrafo que describa lo que es el proyecto._
 ## Comenzando 🚀
 
 Clonar el repositorio github, desde Github Desktop o ejecutar en la terminal o CMD:
-<!-- cambia el link de abajo al de tu repositorio y BORRA ESTE COMENTARIO -->
 ```
-git clone https://github.com/ET12DE1Computacion/simpleTemplateCSharp
+git clone https://github.com/MMorandiniGit/5To8va2021-CineJoits
 ```
 
 ### Pre-requisitos 📋
@@ -47,7 +46,7 @@ _Menciona las herramientas y versiones que utilizaste para crear tu proyecto_
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tuUser/tuRepo/tags).
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/MMorandiniGit/5To8va2021-CineJoits/tags).
 
 ## Autores ✒️
 
