@@ -11,13 +11,13 @@
 
 ## Computación 2021
 
-**Asignatura**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
+**Asignatura**: Administracion y gestion de base de datos
 
-**Nombre TP**: <!-- REEMPLAZA este comentario por el nombre del TP -->
+**Nombre TP**: Cine Joits
 
-**Apellido y nombre Alumno**: <!-- REEMPLAZA este comentario por tu apellido y nombre -->
+**Apellido y nombre Alumno**: Morandini Martin
 
-**Curso**: <!-- REEMPLAZA este comentario por tu curso -->
+**Curso**: 5to 8va
 
 # Título del Proyecto
 
