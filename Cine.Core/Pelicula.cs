@@ -4,5 +4,8 @@ namespace Cine.Core
 {
     public class Pelicula
     {
+        public short idPelicula { get; set;}
+        public string genero { get; set;}
+        public DateTime fecha { get; set;}
     }
 }
