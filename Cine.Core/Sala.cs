@@ -4,9 +4,9 @@ namespace Cine.Core
 {
     public class Sala
     {
-        public sbyte idsala { get; set;}
-        public sbyte piso { get; set;}
-        public ushort capacidad { get; set;}
+        public sbyte Id { get; set;}
+        public sbyte Piso { get; set;}
+        public ushort Capacidad { get; set;}
     }
 
 }
