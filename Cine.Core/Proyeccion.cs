@@ -4,9 +4,9 @@ namespace Cine.Core
 {
     public class Proyeccion
     {
-        public int idProyeccion { get; set;}
-        public int idsala { get; set;}
-        public int idPelicula { get; set;}
+        public short idProyeccion { get; set;}
+        public sbyte idsala { get; set;}
+        public short idPelicula { get; set;}
         public DateTime fechahora { get; set;}
     }
 }

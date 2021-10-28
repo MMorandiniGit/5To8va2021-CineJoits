@@ -4,10 +4,10 @@ namespace Cine.Core
 {
     public class Entrada
     {
-        public int numeroentrada { get; set;}
-        public int idProyeccion { get; set;}
-        public int idCliente { get; set;}
-        public double valor { get; set;}
+        public short numeroentrada { get; set;}
+        public short idProyeccion { get; set;}
+        public short idCliente { get; set;}
+        public decimal valor { get; set;}
     }
 
 }
