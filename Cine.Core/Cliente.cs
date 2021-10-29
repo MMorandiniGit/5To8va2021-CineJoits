@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Cine.Core
 {
     public class Cliente
@@ -7,5 +10,6 @@ namespace Cine.Core
         public string Apellido { get; set;}
         public string Mail { get; set;}
         public string Pass { get; set;}
+        List<string> HistorialEntradas = new List<string>();
     }
 }
