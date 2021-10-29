@@ -1,18 +1,18 @@
 /*Se pide hacer los SP para dar de alta todas las entidades (menos
 Entrada y Cliente) con el prefijo ‘alta’.*/
 DELIMITER $$
-create procedure altapelicula (unidproyeccion smallint,ungenero
+create procedure altapelicula (OUT idPelicula smallint, unidproyeccion smallint,ungenero
 varchar(45),unafecha date,unnombre varchar(45))
 begin
 insert into pelicula (idproyeccion,genero,fecha,nombre)
 values(unidproyeccion,ungenero,unafecha,unnombre);
 end $$
 DELIMITER $$
-create procedure altaproyeccion (unidproyeccion smallint,unidsala
+create procedure altaproyeccion (OUT idProyeccion smallint,unidsala
 tinyint,unidpelicula smallint,unafechahora datetime)
 begin
-insert into proyeccion (proyeccion,idsala,idpelicula,fechahora)
-values (unidproyeccion,unidsala,unidpelicula,unafechahora);
+insert into proyeccion (idsala,idpelicula,fechahora)
+values (unidsala,unidpelicula,unafechahora);
 end$$
 
 DELIMITER $$
@@ -28,7 +28,7 @@ cliente.
 Es importante guardar encriptada la contraseña del cliente usando
 SHA256.*/
 DELIMITER $$
-create procedure registrarcliente (unnombre varchar(45),unapellido
+create procedure registrarcliente (OUT idCliente smallint,unnombre varchar(45),unapellido
 varchar(45),unmail varchar (60),unpass char(64))
 begin
 insert into cliente (nombre,apellido,mail,pass)
