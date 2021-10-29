@@ -11,5 +11,10 @@ namespace Cine.Core
         public string Mail { get; set;}
         public string Pass { get; set;}
         public List<int> Historial { get; set; }
+
+        public Cliente()
+        {
+            List<int> Historial = new List<int>();
+        }
     }
 }
