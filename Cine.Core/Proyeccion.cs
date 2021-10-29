@@ -6,7 +6,7 @@ namespace Cine.Core
     {
         public short Id { get; set;}
         public Sala Sala { get; set;}
-        public short idPelicula { get; set;}
+        public Pelicula Pelicula { get; set;}
         public DateTime Fechahora { get; set;}
     }
 }

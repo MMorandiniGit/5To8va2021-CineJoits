@@ -14,8 +14,7 @@ insert into entrada (numeroentrada,idProyeccion,idCliente,)
                 values  ();
 
 insert into pelicula (genero,fecha,nombre)
-                values   ();
-
+                values  ();
 
 insert into sala (idsala,piso,capacidad)
-                values ();
+                values  ();
