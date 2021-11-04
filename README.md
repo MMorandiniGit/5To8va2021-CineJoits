@@ -38,9 +38,7 @@ _Agrega notas adicionales sobre que cosas se debe instalar, configurar y como ha
 
 ## Construido con 🛠️
 
-- MySql WorkBench.
-- Visual Studio Code.
-
+* [MySql WorkBench](https://www.mysql.com/products/workbench/) - Base de datos. 
 * [Visual Studio Code](https://code.visualstudio.com/#alt-downloads) - Editor de código.
 
 ## Versionado 📌
