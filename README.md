@@ -1,8 +1,6 @@
-<!-- Completa abajo cambiando ET12DE1Computacion a tu user|organización y template a tu repo, te recomiendo usar el Find & Replace de tu editor -->
 ![main build.NET5](https://github.com/MMorandiniGit/5To8va2021-CineJoits/workflows/main-build.NET5/badge.svg?branch=main) ![main test.NET5](https://github.com/MMorandiniGit/5To8va2021-CineJoits/workflows/main-test.NET5/badge.svg?branch=main)
 ![dev build.NET5](https://github.com/MMorandiniGit/5To8va2021-CineJoits/workflows/dev-build.NET5/badge.svg?branch=dev) ![dev test.NET5](https://github.com/MMorandiniGit/5To8va2021-CineJoits/workflows/dev-test.NET5/badge.svg?branch=dev)
 [![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/MMorandiniGit/5To8va2021-CineJoits)
-<!-- Borra este comentario y linea después haber cambiado arriba las ocurrencias de tu usuario/repo -->
 
 <h1 align="center">E.T. Nº12 D.E. 1º "Libertador Gral. José de San Martín"</h1>
 <p align="center">
@@ -21,7 +19,7 @@
 
 # Título del Proyecto
 
-_Acá va un párrafo que describa lo que es el proyecto._
+Implementación de la base de datos de un cine en MySql con C#. 
 
 ## Comenzando 🚀
 
@@ -40,7 +38,8 @@ _Agrega notas adicionales sobre que cosas se debe instalar, configurar y como ha
 
 ## Construido con 🛠️
 
-_Menciona las herramientas y versiones que utilizaste para crear tu proyecto_
+- MySql WorkBench.
+- Visual Studio Code.
 
 * [Visual Studio Code](https://code.visualstudio.com/#alt-downloads) - Editor de código.
 
@@ -52,8 +51,8 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Max Power** - *Desarrollo* - [Maxpower](https://github.com/maxpower)
-* **Cosme Fulanito** - *Documentación* - [Cosmefulanito](#Cosmefulanito)
+* **Martin Morandini** - *Desarrollo* - [MMorandiniGit](https://github.com/MMorandiniGit)
+* **Alejandro Carrasco** - *Documentación* - [jajajajjajxd](https://github.com/jajajajjajxd)
 
 ## Licencia 📄
 
