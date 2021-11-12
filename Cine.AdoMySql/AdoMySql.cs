@@ -22,7 +22,7 @@ namespace Cine.AdoMySql
 
         public List<Pelicula> ObtenerPeliculas()
         {
-            throw new NotImplementedException();
+            throw new ()NotImplementedException;
         }
 
         public List<Sala> ObtenerSalas()

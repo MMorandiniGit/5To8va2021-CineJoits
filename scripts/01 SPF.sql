@@ -19,7 +19,7 @@ end$$
 
 DELIMITER $$
 
-create procedure altasala (unidsala tinyint,unpiso tinyint,unacapacidad
+create procedure altaSala (unidsala tinyint,unpiso tinyint,unacapacidad
 smallint)
 begin
 insert into sala (idsala,piso,unacapacidad)
