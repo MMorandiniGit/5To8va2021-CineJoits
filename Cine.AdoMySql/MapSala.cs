@@ -18,17 +18,29 @@ namespace Cine.AdoMySql
         => new Sala()
         {
             id=Convert.ToByte(fila["idSala"]),
-            nombre=fila["sala"].ToString()
+            piso=fila["piso"].ToString(),
+            capacidad=Convert.toshort(fila["capacidad"]),
         };
-
-        internal void AltaSala(Sala sala)
+        public void AltaSala(Sala sala)
+        =>EjecutarComandoCon("altaSala", ConfigurarAltaSala, PostAltaSala, sala);
+        public void ConfigurarAltaSala(Sala sala)
         {
-            throw new NotImplementedException();
-        }
+            SetComandoSP("altaSala");
 
-        internal List<Sala> ObtenerSalas()
-        {
-            throw new NotImplementedException();
+            BD.CrearParametroSalida("unidsala")
+            .SetTipo(MySql.Data.MySqlClient.MySqlDbType.UByte)
+            .AgregarParametro();
+
+            BP.CrearParametro("unaSala")
+              .SetTipoVarchar(45)
+              .SetValor(sala.Nombre)
+              .AgregarParametro();
         }
+        public void PostAltaSala(Sala sala)
+        {
+            var paramIdSala=GetParametro("unaIdSala");
+            rubro.Id=Convert.ToByte(paramIdSala.Value);
+        }
+        internal List<Sala> ObtenerSalas() => ColeccionDesdeTabla();
     }
 }
