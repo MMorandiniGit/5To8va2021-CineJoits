@@ -9,10 +9,17 @@ namespace Cine.AdoMySql
 {
     public class MapSala:Mapeador<Sala>
     {
-        public override Sala ObjetoDesdeFila(DataRow fila)
+        public MapSala(AdoAGBD ado):base(ado)
         {
-            throw new NotImplementedException();
+            Tabla ="Sala";
         }
+
+        public override Sala ObjetoDesdeFila(DataRow fila)
+        => new Sala()
+        {
+            id=Convert.ToByte(fila["idSala"]),
+            nombre=fila["sala"].ToString()
+        };
 
         internal void AltaSala(Sala sala)
         {
