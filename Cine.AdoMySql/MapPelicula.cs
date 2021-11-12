@@ -16,8 +16,34 @@ namespace Cine.AdoMySql
             Tabla = "Pelicula";
         }
         public override Pelicula ObjetoDesdeFila(DataRow fila)
+            => new Pelicula()
         {
-            throw new NotImplementedException();
+            Id = Convert.ToByte(fila["idPelicula"]),
+            Nombre = fila["Pelicula"].ToString()
+        };
+
+        public void AltaPelicula(Pelicula pelicula)
+            => EjecutarComandoCon("altaPelicula", ConfigurarAltaPelicula, PostAltaPelicula, pelicula);
+        public void ConfigurarAltaPelicula(Pelicula pelicula)
+        {
+            SetComandoSP("altaPelicula");
+
+            BP.CrearParametroSalida("unidPelicula")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int16)
+              .AgregarParametro();
+
+            BP.CrearParametro("unaPelicula")
+              .SetTipoVarchar(45)
+              .SetValor(pelicula.Nombre)
+              .AgregarParametro();
         }
+
+        public void PostAltaPelicula(Pelicula pelicula)
+        {
+            var paramIdPelicula = GetParametro("unidPelicula");
+            pelicula.Id = Convert.ToByte(paramIdPelicula.Value);
+        }
+
+        public List<Pelicula> ObtenerPeliculas() => ColeccionDesdeTabla();
     }
 }
