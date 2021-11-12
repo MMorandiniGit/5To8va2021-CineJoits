@@ -17,9 +17,9 @@ namespace Cine.AdoMySql
         public override Sala ObjetoDesdeFila(DataRow fila)
         => new Sala()
         {
-            id=Convert.ToByte(fila["idSala"]),
-            piso=fila["piso"].ToString(),
-            capacidad=Convert.toshort(fila["capacidad"]),
+            Id = Convert.ToSByte(fila["idSala"]),
+            Piso = Convert.ToSByte(fila["Piso"]),
+            Capacidad = Convert.ToUInt16(fila["Capacidad"]),
         };
         public void AltaSala(Sala sala)
         =>EjecutarComandoCon("altaSala", ConfigurarAltaSala, PostAltaSala, sala);
@@ -27,19 +27,19 @@ namespace Cine.AdoMySql
         {
             SetComandoSP("altaSala");
 
-            BD.CrearParametroSalida("unidsala")
-            .SetTipo(MySql.Data.MySqlClient.MySqlDbType.UByte)
-            .AgregarParametro();
+            BP.CrearParametroSalida("unidsala")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.UByte)
+              .AgregarParametro();
 
             BP.CrearParametro("unaSala")
               .SetTipoVarchar(45)
-              .SetValor(sala.Nombre)
+              .SetValor(sala.Capacidad)
               .AgregarParametro();
         }
         public void PostAltaSala(Sala sala)
         {
             var paramIdSala=GetParametro("unaIdSala");
-            rubro.Id=Convert.ToByte(paramIdSala.Value);
+            sala.Id = Convert.ToSByte(paramIdSala.Value);
         }
         internal List<Sala> ObtenerSalas() => ColeccionDesdeTabla();
     }
