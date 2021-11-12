@@ -1,23 +1,25 @@
 /*Se pide hacer los SP para dar de alta todas las entidades (menos
 Entrada y Cliente) con el prefijo ‘alta’.*/
 DELIMITER $$
-create procedure altapelicula (OUT idPelicula smallint, unidproyeccion smallint,ungenero
+create procedure altaPelicula (OUT unidPelicula smallint, unidproyeccion smallint,ungenero
 varchar(45),unafecha date,unnombre varchar(45))
 begin
 insert into pelicula (idproyeccion,genero,fecha,nombre)
 values(unidproyeccion,ungenero,unafecha,unnombre);
+set  unidPelicula = LAST_INSERT_ID();
 end $$
 DELIMITER $$
-create procedure altaproyeccion (OUT idProyeccion smallint,unidsala
+create procedure altaProyeccion (OUT unidProyeccion smallint,unidsala
 tinyint,unidpelicula smallint,unafechahora datetime)
 begin
 insert into proyeccion (idsala,idpelicula,fechahora)
 values (unidsala,unidpelicula,unafechahora);
+set unidProyeccion = LAST_INSERT_ID();
 end$$
 
 DELIMITER $$
 
-create procedure altasala (unidsala tinyint,unpiso tinyint,unacapacidad
+create procedure altaSala (unidsala tinyint,unpiso tinyint,unacapacidad
 smallint)
 begin
 insert into sala (idsala,piso,unacapacidad)
