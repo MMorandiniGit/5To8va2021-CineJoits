@@ -42,8 +42,7 @@ namespace Cine.AdoMySql
         {
             var paramIdPelicula = GetParametro("unidPelicula");
             pelicula.Id = Convert.ToByte(paramIdPelicula.Value);
-        }
-
+        }        
         public List<Pelicula> ObtenerPeliculas() => ColeccionDesdeTabla();
     }
 }

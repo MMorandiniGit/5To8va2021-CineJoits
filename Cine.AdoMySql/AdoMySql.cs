@@ -12,7 +12,7 @@ namespace Cine.AdoMySql
         public MapPelicula MapPelicula { get; set; }
         public void AltaPelicula(Pelicula pelicula)
         {
-            throw new NotImplementedException();
+            MapPelicula.AltaPelicula(pelicula);
         }
 
         public void AltaSala(Sala sala)
@@ -22,7 +22,7 @@ namespace Cine.AdoMySql
 
         public List<Pelicula> ObtenerPeliculas()
         {
-            throw new NotImplementedException();
+            return MapPelicula.ObtenerPeliculas();
         }
 
         public List<Sala> ObtenerSalas()
