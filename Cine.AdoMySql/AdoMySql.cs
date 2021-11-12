@@ -1,6 +1,4 @@
-﻿using System;
-using et12.edu.ar.AGBD.Ado;
-using Cine.Core;
+﻿using Cine.Core;
 using System.Collections.Generic;
 
 namespace Cine.AdoMySql

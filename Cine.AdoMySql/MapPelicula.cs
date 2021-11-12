@@ -3,8 +3,6 @@ using et12.edu.ar.AGBD.Ado;
 using Cine.Core;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Data;
 
 namespace Cine.AdoMySql
