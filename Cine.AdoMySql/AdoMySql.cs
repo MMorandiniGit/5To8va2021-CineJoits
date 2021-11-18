@@ -1,4 +1,5 @@
 ﻿using Cine.Core;
+using Cine.AdoMySql.Mapeadores;
 using System.Collections.Generic;
 
 namespace Cine.AdoMySql

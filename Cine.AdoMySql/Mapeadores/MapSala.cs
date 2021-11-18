@@ -5,7 +5,7 @@ using Cine.Core;
 using et12.edu.ar.AGBD.Ado;
 using et12.edu.ar.AGBD.Mapeadores;
 
-namespace Cine.AdoMySql
+namespace Cine.AdoMySql.Mapeadores
 {
     public class MapSala:Mapeador<Sala>
     {

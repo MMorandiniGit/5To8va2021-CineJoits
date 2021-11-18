@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace Cine.AdoMySql
+namespace Cine.AdoMySql.Mapeadores
 {
     public class MapPelicula : Mapeador<Pelicula>
     {
