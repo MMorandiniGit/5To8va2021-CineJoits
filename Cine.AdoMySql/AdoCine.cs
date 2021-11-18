@@ -10,12 +10,16 @@ namespace Cine.AdoMySql
     {
         public AdoAGBD Ado { get; set; }
         public MapPelicula MapPelicula { get; set; }
+        public MapSala MapSala { get; set; }
         public AdoCine(AdoAGBD ado)
         {
             Ado = ado;
             MapPelicula = new MapPelicula(ado);
+            MapSala = new MapSala(ado);
         }
         public void altaPelicula(Pelicula pelicula) => MapPelicula.AltaPelicula(pelicula);
         public List<Pelicula> ObtenerPelicula() => MapPelicula.ObtenerPeliculas();
+        public void altaSala(Sala sala) => MapSala.AltaSala(sala);
+        public List<Sala> ObtenerSala() =>MapSala.ObtenerSalas();
     }
 }
