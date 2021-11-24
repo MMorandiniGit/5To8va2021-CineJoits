@@ -5,7 +5,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="et12.edu.ar.AGBD-Ado" Version="0.10.0-aplha" />
+    <PackageReference Include="et12.edu.ar.AGBD-Ado" Version="1.0.0" />
   </ItemGroup>
 
   <PropertyGroup>
