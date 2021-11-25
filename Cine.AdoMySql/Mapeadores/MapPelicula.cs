@@ -25,14 +25,19 @@ namespace Cine.AdoMySql.Mapeadores
         public void ConfigurarAltaPelicula(Pelicula pelicula)
         {
             SetComandoSP("altaPelicula");
-
+            
             BP.CrearParametroSalida("unidPelicula")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int16)
               .AgregarParametro();
 
-            BP.CrearParametro("unaPelicula")
-              .SetTipoVarchar(45)
-              .SetValor(pelicula.Nombre)
+            BP.CrearParametro("ungenero")
+              .SetValor(pelicula.Genero)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Varchar)
+              .AgregarParametro();
+
+            BP.CrearParametro("unafecha")
+              .SetValor(pelicula.Fecha)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.DateTime)
               .AgregarParametro();
         }
 
