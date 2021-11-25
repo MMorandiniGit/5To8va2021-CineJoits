@@ -9,8 +9,7 @@ namespace AdminConsola.Menu
     public class MenuAltaSala : MenuCompuesto
     {
         private Sala Sala { get; set; } 
-
-
+        
         public override void mostrar()
         {
             base.mostrar();
