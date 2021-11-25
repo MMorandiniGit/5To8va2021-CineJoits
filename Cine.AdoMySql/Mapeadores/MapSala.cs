@@ -28,17 +28,22 @@ namespace Cine.AdoMySql.Mapeadores
             SetComandoSP("altaSala");
 
             BP.CrearParametroSalida("unidsala")
-              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.UByte)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Byte)
               .AgregarParametro();
 
-            BP.CrearParametro("unaSala")
-              .SetTipoVarchar(45)
-              .SetValor(sala.Capacidad)
+            BP.CrearParametro("unpiso")
+              .SetValor(sala.Piso)  
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Byte)
               .AgregarParametro();
+
+            BP.CrearParametro("unacapacidad")
+              .SetValor(sala.Capacidad)  
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.UInt16)
+              .AgregarParametro();          
         }
         public void PostAltaSala(Sala sala)
         {
-            var paramIdSala=GetParametro("unaIdSala");
+            var paramIdSala=GetParametro("unidsala");
             sala.Id = Convert.ToSByte(paramIdSala.Value);
         }
         internal List<Sala> ObtenerSalas() => ColeccionDesdeTabla();

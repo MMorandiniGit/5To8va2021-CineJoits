@@ -7,9 +7,9 @@ namespace AdminConsola.Menu
 {
     public class MenuListaPeliculas : MenuListador<Pelicula>
     {
-        public override void imprimirElemento(Pelicula Pelicula)
+        public override void imprimirElemento(Pelicula pelicula)
         {
-            Console.WriteLine($"{peliculas.Id}\t\t{peliculas.Genero}\t\t{peliculas.Fecha}\t\t{peliculas.Nombre}");
+            Console.WriteLine($"{pelicula.Id}\t\t{pelicula.Genero}\t\t{pelicula.Fecha}\t\t{pelicula.Nombre}");
         }
 
         public override List<Pelicula> obtenerLista() => Program.Ado.ObtenerPeliculas();

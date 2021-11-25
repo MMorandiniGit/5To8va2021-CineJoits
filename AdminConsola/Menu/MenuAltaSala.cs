@@ -5,7 +5,7 @@ using et12.edu.ar.MenuesConsola;
 
 namespace AdminConsola.Menu
 {
-    public class MenuAltaSala : MenuCompuesto
+    public class MenuAltaSala : MenuComponente
     {
         private Sala Sala { get; set; }
 

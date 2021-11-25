@@ -1,5 +1,6 @@
 using System;
-using MenuesConsola;
+using Cine.Core;
+using et12.edu.ar.MenuesConsola;
 
 
 namespace AdminConsola.Menu
@@ -8,16 +9,20 @@ namespace AdminConsola.Menu
     {
         private Pelicula Pelicula { get; set; } 
 
+        public MenuAltaPelicula()
+        {
+            Nombre = "Alta Pelicula";
+        }
         public override void mostrar()
         {
             base.mostrar();
 
-            var id = prompt("Ingrese el id de la pelicula: ");
             var Genero = prompt("Ingrese el genero: ");
             var Fecha = prompt("Ingrese la fecha: ");
             var Nombre = prompt("Ingrese el nombre: ");
             
-            Pelicula = new Pelicula(id,Genero,Fecha,Nombre);
+            
+            //Pelicula = new Pelicula(Genero, Fecha, Nombre);
 
             try
             {
