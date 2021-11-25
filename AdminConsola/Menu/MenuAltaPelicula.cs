@@ -5,7 +5,7 @@ using et12.edu.ar.MenuesConsola;
 
 namespace AdminConsola.Menu
 {
-    public class MenuAltaPelicula : MenuCompuesto
+    public class MenuAltaPelicula : MenuComponente
     {
         private Pelicula Pelicula { get; set; } 
 
