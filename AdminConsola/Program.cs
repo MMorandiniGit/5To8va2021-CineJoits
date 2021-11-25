@@ -17,7 +17,7 @@ namespace AdminConsola
             Ado = new AdoCine(adoAGBD);
 
             var menuListaSalas = new MenuListaSalas() { Nombre = "Listado Salas" };
-            var menuAltaSala = new MenuAltaSala("Alta sala");
+            var menuAltaSala = new MenuAltaSala();
 
             var menuSala = new MenuCompuesto("Menu Sala", menuAltaSala, menuListaSalas);
 
