@@ -17,7 +17,9 @@ namespace Cine.AdoMySql.Mapeadores
             => new Pelicula()
         {
             Id = Convert.ToByte(fila["idPelicula"]),
-            Nombre = fila["Pelicula"].ToString()
+            Genero = fila["genero"].ToString(),
+            Fecha = Convert.ToDateTime(fila["fecha"]),
+            Nombre = fila["nombre"].ToString()
         };
 
         public void AltaPelicula(Pelicula pelicula)
@@ -38,6 +40,11 @@ namespace Cine.AdoMySql.Mapeadores
             BP.CrearParametro("unafecha")
               .SetValor(pelicula.Fecha)
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.DateTime)
+              .AgregarParametro();
+
+            BP.CrearParametro("unnombre")
+              .SetValor(pelicula.Nombre)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
               .AgregarParametro();
         }
 

@@ -15,7 +15,7 @@ namespace Cine.AdoMySql.Mapeadores
         }
 
         public override Sala ObjetoDesdeFila(DataRow fila)
-        => new Sala()
+            => new Sala()
         {
             Id = Convert.ToSByte(fila["idSala"]),
             Piso = Convert.ToSByte(fila["Piso"]),
