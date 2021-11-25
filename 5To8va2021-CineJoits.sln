@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cine.Core", "Cine.Core\Cine.Core.csproj", "{8167D80F-89EB-40AB-B46A-E7AA40A58023}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cine.Core", "Cine.Core\Cine.Core.csproj", "{8167D80F-89EB-40AB-B46A-E7AA40A58023}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cine.AdoMySql", "Cine.AdoMySql\Cine.AdoMySql.csproj", "{58B038F2-EA5C-4D92-AEA6-BA1E5DD7BDC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cine.AdoMySql", "Cine.AdoMySql\Cine.AdoMySql.csproj", "{58B038F2-EA5C-4D92-AEA6-BA1E5DD7BDC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminConsola", "AdminConsola\AdminConsola.csproj", "{8030CA45-B0A1-4290-849B-FE8C375197C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8167D80F-89EB-40AB-B46A-E7AA40A58023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +43,23 @@ Global
 		{58B038F2-EA5C-4D92-AEA6-BA1E5DD7BDC6}.Release|x64.Build.0 = Release|Any CPU
 		{58B038F2-EA5C-4D92-AEA6-BA1E5DD7BDC6}.Release|x86.ActiveCfg = Release|Any CPU
 		{58B038F2-EA5C-4D92-AEA6-BA1E5DD7BDC6}.Release|x86.Build.0 = Release|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Debug|x64.Build.0 = Debug|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Debug|x86.Build.0 = Debug|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Release|x64.ActiveCfg = Release|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Release|x64.Build.0 = Release|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Release|x86.ActiveCfg = Release|Any CPU
+		{8030CA45-B0A1-4290-849B-FE8C375197C5}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD28D52C-5B4F-4338-A5F7-68059CC0230A}
 	EndGlobalSection
 EndGlobal

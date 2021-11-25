@@ -7,16 +7,21 @@ namespace AdminConsola.Menu
 {
     public class MenuAltaSala : MenuCompuesto
     {
-        private Sala Sala { get; set; } 
+        private Sala Sala { get; set; }
+
+        public MenuAltaSala():base("Alta sala")
+        {
+
+        }
 
         public override void mostrar()
         {
             base.mostrar();
 
-            var piso = prompt("Ingrese el piso de la sala");
-            var capacidad = prompt("Ingrese la capacidad");
+            var piso = sbyte.Parse(prompt("Ingrese el piso de la sala"));
+            var capacidad = ushort.Parse(prompt("Ingrese la capacidad"));
 
-            Sala = new Sala(Piso, Capacidad);
+            Sala = new Sala(piso, capacidad);
 
             try
             {

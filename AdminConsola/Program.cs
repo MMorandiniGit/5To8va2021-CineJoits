@@ -13,17 +13,17 @@ namespace AdminConsola
         public static IAdo Ado {get; private set;}
         static void Main(string[] args)
         {
-            var adoAGBD = FactoryAdoMySQL.GetAdoMySQL("appSettings.json", "admin");
-            Ado= new AdoCine(adoAGBD);
+            var adoAGBD = FactoryAdoAGBD.GetAdoMySQL("appSettings.json", "admin");
+            Ado = new AdoCine(adoAGBD);
 
             var menuListaSalas = new MenuListaSalas() { Nombre = "Listado Salas" };
-            var menuAltaSala = new MenuAltaSala();
+            var menuAltaSala = new MenuAltaSala("Alta sala");
 
             var menuSala = new MenuCompuesto("Menu Sala", menuAltaSala, menuListaSalas);
 
             var menuInicial = new MenuCompuesto("Menu Admin", menuSala);
 
-            menuInicial.Mostrar();
+            menuInicial.mostrar();
         }
     }
 }
