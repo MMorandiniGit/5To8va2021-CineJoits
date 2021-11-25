@@ -32,7 +32,7 @@ namespace Cine.AdoMySql.Mapeadores
 
             BP.CrearParametro("ungenero")
               .SetValor(pelicula.Genero)
-              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Varchar)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
               .AgregarParametro();
 
             BP.CrearParametro("unafecha")

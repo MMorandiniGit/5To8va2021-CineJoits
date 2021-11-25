@@ -19,7 +19,7 @@ namespace AdminConsola.Menu
 
             var genero = prompt("Ingrese el genero: ");
             var dia = Convert.ToInt32(prompt("Ingrese el dia: " ));
-            var mes = Convert.ToInt32(prompt("Ingrese la hora: "));
+            var mes = Convert.ToInt32(prompt("Ingrese el mes: "));
             var ano = Convert.ToInt32(prompt("Ingrese el año: "));
             var nombre = prompt("Ingrese el nombre: ");
             

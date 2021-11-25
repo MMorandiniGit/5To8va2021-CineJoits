@@ -3,6 +3,7 @@ using et12.edu.ar.AGBD.Ado;
 using Cine.Core;
 using System.Collections.Generic;
 using System.Data;
+using System;
 
 namespace Cine.AdoMySql.Mapeadores
 {
