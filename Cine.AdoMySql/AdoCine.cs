@@ -6,7 +6,7 @@ using Cine.AdoMySql.Mapeadores;
 
 namespace Cine.AdoMySql
 {
-    public class AdoCine
+    public class AdoCine: IAdo
     {
         public AdoAGBD Ado { get; set; }
         public MapPelicula MapPelicula { get; set; }
@@ -17,9 +17,9 @@ namespace Cine.AdoMySql
             MapPelicula = new MapPelicula(ado);
             MapSala = new MapSala(ado);
         }
-        public void altaPelicula(Pelicula pelicula) => MapPelicula.AltaPelicula(pelicula);
-        public List<Pelicula> ObtenerPelicula() => MapPelicula.ObtenerPeliculas();
-        public void altaSala(Sala sala) => MapSala.AltaSala(sala);
-        public List<Sala> ObtenerSala() =>MapSala.ObtenerSalas();
+        public void AltaPelicula(Pelicula pelicula) => MapPelicula.AltaPelicula(pelicula);
+        public List<Pelicula> ObtenerPeliculas() => MapPelicula.ObtenerPeliculas();
+        public void AltaSala(Sala sala) => MapSala.AltaSala(sala);
+        public List<Sala> ObtenerSalas() =>MapSala.ObtenerSalas();
     }
 }
