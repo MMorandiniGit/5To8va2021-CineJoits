@@ -11,7 +11,7 @@ namespace AdminConsola.Menu
     {
         public override void imprimirElemento(Sala salas)
         {
-            Console.WriteLine($"{salas.Id}\t\t{salas.Piso}\t\t{salas.Capacidad}");
+            Console.WriteLine($"N°:{salas.Id}\t\tPiso: {salas.Piso}\t\tCapacidad: {salas.Capacidad}");
         }
 
         public override List<Cajero> ObtenerSalas() => Program.Ado.ObtenerSalas();
