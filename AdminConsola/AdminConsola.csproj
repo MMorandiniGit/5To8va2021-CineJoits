@@ -6,12 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BiblioMenu" Version="1.1.0" />
+    <ProjectReference Include="..\Cine.Core\Cine.Core.csproj" />
+    <ProjectReference Include="..\Cine.AdoMySql\Cine.AdoMySql.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cine.Core\Cine.Core.csproj" />
-    <ProjectReference Include="..\Cine.AdoMySql\Cine.AdoMySql.csproj" />
+    <PackageReference Include="BiblioMenu" Version="1.1.0" />
   </ItemGroup>
 
 </Project>
