@@ -8,5 +8,6 @@ namespace Cine.Core
         void AltaSala(Sala sala);
         List<Sala> ObtenerSalas();
         List<Pelicula> ObtenerPeliculas();
+        List<Proyeccion> ObtenerProyecciones();
     }
 }
