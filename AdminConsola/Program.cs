@@ -13,7 +13,7 @@ namespace AdminConsola
         public static IAdo Ado {get; private set;}
         static void Main(string[] args)
         {
-            var adoAGBD = FactoryAdoMySQL.GetAdoDesdeJson("appSettings.json", "admin");
+            var adoAGBD = FactoryAdoMySQL.GetAdoMySQL("appSettings.json", "admin");
             Ado= new AdoCine(adoAGBD);
 
             var menuListaSalas = new MenuListaSalas() { Nombre = "Listado Salas" };

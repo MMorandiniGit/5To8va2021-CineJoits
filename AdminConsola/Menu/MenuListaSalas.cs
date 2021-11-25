@@ -14,6 +14,6 @@ namespace AdminConsola.Menu
             Console.WriteLine($"N°:{salas.Id}\t\tPiso: {salas.Piso}\t\tCapacidad: {salas.Capacidad}");
         }
 
-        public override List<Sala> ObtenerLista() => Program.Ado.ObtenerSalas();
+        public override List<Sala> obtenerLista() => Program.Ado.ObtenerSalas();
     }
 }
