@@ -15,6 +15,5 @@ namespace AdminConsola.Menu
         }
 
         public override List<Cajero> ObtenerSalas() => Program.Ado.ObtenerSalas();
-        
     }
 }

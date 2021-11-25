@@ -15,8 +15,8 @@ namespace AdminConsola
             var adoAGBD = FactoryAdoMySQL.GetAdoDesdeJson("appSettings.json", "admin");
             Ado= new AdoCine(adoAGBD);
 
-            var menuAltaSala = new MenuAltaSala() { Nombre = "Alta Sala" }; 
             var menuListaSalas = new MenuListaSalas() { Nombre = "Listado Salas" };
+            var menuAltaSala = new MenuAltaSala(menuListaSalas);
 
             var menuSala = new MenuCompuesto(){ Nombre = "Salas" };
             menuSala.agregarMenu(menuListaSalas);
