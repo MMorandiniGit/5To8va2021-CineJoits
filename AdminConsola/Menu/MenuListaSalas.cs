@@ -1,5 +1,5 @@
 using System;
-using MenuesConsola;
+using et12.edu.ar.MenuesConsola;
 using Cine.Core;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,6 @@ namespace AdminConsola.Menu
             Console.WriteLine($"N°:{salas.Id}\t\tPiso: {salas.Piso}\t\tCapacidad: {salas.Capacidad}");
         }
 
-        public override List<Cajero> ObtenerSalas() => Program.Ado.ObtenerSalas();
+        public override List<Sala> ObtenerLista() => Program.Ado.ObtenerSalas();
     }
 }

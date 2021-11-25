@@ -1,6 +1,7 @@
 ﻿using System;
-using MenuesConsola;
+using et12.edu.ar.MenuesConsola;
 using AdminConsola.Menu;
+using Cine.Core;
 using Cine;
 using Cine.AdoMySql;
 using et12.edu.ar.AGBD.Ado;

@@ -1,5 +1,6 @@
 using System;
-using MenuesConsola;
+using Cine.Core;
+using et12.edu.ar.MenuesConsola;
 
 
 namespace AdminConsola.Menu
