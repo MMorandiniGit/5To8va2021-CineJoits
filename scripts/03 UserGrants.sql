@@ -6,9 +6,9 @@ Administrador:
 
 DROP USER IF EXISTS 'Administrador'@'%';
 CREATE USER 'Administrador'@'%' IDENTIFIED BY 'AdminPass';
-GRANT SELECT cine.* TO 'Administrador'@'%';
-GRANT INSERT ON cine.peliculas to 'Administrador'@'localhost';
-GRANT UPDATE ON cine.peliculas to 'Administrador'@'localhost';
+GRANT SELECT ON cine.* TO 'Administrador'@'%';
+GRANT INSERT ON cine.pelicula to 'Administrador'@'localhost';
+GRANT UPDATE ON cine.pelicula to 'Administrador'@'localhost';
 GRANT INSERT ON cine.proyeccion to 'Administrador'@'localhost';
 GRANT UPDATE ON cine.proyeccion to 'Administrador'@'localhost';
 GRANT INSERT ON cine.salas to 'Administrador'@'localhost';
