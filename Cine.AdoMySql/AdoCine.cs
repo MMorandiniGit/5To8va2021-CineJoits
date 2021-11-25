@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using et12.edu.ar.AGBD.Ado;
 using Cine.Core;
@@ -11,15 +10,19 @@ namespace Cine.AdoMySql
         public AdoAGBD Ado { get; set; }
         public MapPelicula MapPelicula { get; set; }
         public MapSala MapSala { get; set; }
+        public MapProyecciones MapProyecciones { get; set; }
         public AdoCine(AdoAGBD ado)
         {
             Ado = ado;
             MapPelicula = new MapPelicula(ado);
             MapSala = new MapSala(ado);
+            MapProyecciones = new MapProyecciones(ado);
         }
         public void AltaPelicula(Pelicula pelicula) => MapPelicula.AltaPelicula(pelicula);
         public List<Pelicula> ObtenerPeliculas() => MapPelicula.ObtenerPeliculas();
         public void AltaSala(Sala sala) => MapSala.AltaSala(sala);
         public List<Sala> ObtenerSalas() =>MapSala.ObtenerSalas();
+
+        public List<Proyeccion> ObtenerProyecciones() => MapProyecciones.ObtenerProyecciones();
     }
 }

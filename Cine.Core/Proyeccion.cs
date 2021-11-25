@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Cine.Core
 {
@@ -8,5 +9,10 @@ namespace Cine.Core
         public Sala Sala { get; set;}
         public Pelicula Pelicula { get; set;}
         public DateTime Fechahora { get; set;}
+
+        public Proyeccion()
+        {
+            List<int> HistorialPro = new List<int>();
+        }
     }
 }

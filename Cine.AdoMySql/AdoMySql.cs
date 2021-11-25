@@ -9,6 +9,8 @@ namespace Cine.AdoMySql
         public MapSala MapSala { get; set; }
 
         public MapPelicula MapPelicula { get; set; }
+
+        public MapProyecciones MapProyecciones { get; set; }
         public void AltaPelicula(Pelicula pelicula)
         {
             MapPelicula.AltaPelicula(pelicula);
@@ -27,6 +29,11 @@ namespace Cine.AdoMySql
         public List<Sala> ObtenerSalas()
         {
             return MapSala.ObtenerSalas();
+        }
+
+        public List<Proyeccion> ObtenerProyecciones()
+        {
+            return MapProyecciones.ObtenerProyecciones();
         }
     }
 }
