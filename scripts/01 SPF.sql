@@ -19,11 +19,12 @@ end$$
 
 DELIMITER $$
 
-create procedure altaSala (unidsala tinyint,unpiso tinyint,unacapacidad
+create procedure altaSala (out unidsala tinyint,unpiso tinyint,unacapacidad
 smallint)
 begin
-insert into sala (idsala,piso,unacapacidad)
-values (unidsala,unpiso,unacapacidad);
+insert into sala (piso,capacidad)
+values (unpiso,unacapacidad);
+set unidsala = LAST_INSERT_ID();
 end $$
 /*Se pide hacer el SP ‘registrarCliente’ que reciba los datos del
 cliente.

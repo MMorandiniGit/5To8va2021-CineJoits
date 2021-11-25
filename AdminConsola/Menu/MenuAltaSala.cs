@@ -19,12 +19,7 @@ namespace AdminConsola.Menu
             var piso = prompt("Ingrese el piso de la sala");
             var capacidad = prompt("Ingrese la capacidad");
 
-            Sala = new Sala(id)
-            {
-                Id = id,
-                Piso = piso,
-                Capacidad = Capacidad
-            };
+            Sala = new Sala(Piso, Capacidad);
 
             try
             {

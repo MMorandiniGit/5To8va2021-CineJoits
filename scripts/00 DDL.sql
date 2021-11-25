@@ -37,7 +37,7 @@ CREATE TABLE Proyeccion (
 );
 
 CREATE TABLE sala (
-	idsala tinyint NOT NULL,
+	idsala tinyint NOT NULL AUTO_INCREMENT,
 	piso tinyint NOT NULL,
 	capacidad smallint UNSIGNED,
 	CONSTRAINT PK_CLIENTE PRIMARY KEY (idsala ASC)
