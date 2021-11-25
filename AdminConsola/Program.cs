@@ -24,6 +24,8 @@ namespace AdminConsola
 
             var menuInicial = new MenuCompuesto() {Nombre = "Menu Admin"};
             menuInicial.agregarMenu(menuSala);
+
+            menuInicial.Mostrar();
         }
     }
 }
