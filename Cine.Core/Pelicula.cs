@@ -5,6 +5,8 @@ namespace Cine.Core
 {
     public class Pelicula
     {
+        private object genero;
+
         public short Id { get; set;}
         public string Genero { get; set;}
         public DateTime Fecha { get; set;}
@@ -14,6 +16,13 @@ namespace Cine.Core
         public Pelicula()
         {
             List<int> HistorialP = new List<int>();
+        }
+
+        public Pelicula(string genero, DateTime fecha, string nombre)
+        {
+            Genero = genero;
+            Fecha = fecha;
+            Nombre = nombre;
         }
     }
 }

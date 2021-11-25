@@ -2,7 +2,6 @@ using System;
 using Cine.Core;
 using et12.edu.ar.MenuesConsola;
 
-
 namespace AdminConsola.Menu
 {
     public class MenuAltaPelicula : MenuComponente
@@ -13,16 +12,19 @@ namespace AdminConsola.Menu
         {
             Nombre = "Alta Pelicula";
         }
+        
         public override void mostrar()
         {
             base.mostrar();
 
-            var Genero = prompt("Ingrese el genero: ");
-            var Fecha = prompt("Ingrese la fecha: ");
-            var Nombre = prompt("Ingrese el nombre: ");
+            var genero = prompt("Ingrese el genero: ");
+            var dia = Convert.ToInt32(prompt("Ingrese el dia: " ));
+            var mes = Convert.ToInt32(prompt("Ingrese la hora: "));
+            var ano = Convert.ToInt32(prompt("Ingrese el año: "));
+            var nombre = prompt("Ingrese el nombre: ");
             
-            
-            //Pelicula = new Pelicula(Genero, Fecha, Nombre);
+            var fecha = new DateTime(year:ano, month:mes, day:dia);
+            Pelicula = new Pelicula(genero, fecha, nombre);
 
             try
             {

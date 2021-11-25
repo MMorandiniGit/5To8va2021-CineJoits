@@ -1,11 +1,11 @@
 /*Se pide hacer los SP para dar de alta todas las entidades (menos
 Entrada y Cliente) con el prefijo ‘alta’.*/
 DELIMITER $$
-create procedure altaPelicula (OUT unidPelicula smallint, unidproyeccion smallint,ungenero
+create procedure altaPelicula (OUT unidPelicula smallint, ungenero
 varchar(45),unafecha date,unnombre varchar(45))
 begin
-insert into pelicula (idproyeccion,genero,fecha,nombre)
-values(unidproyeccion,ungenero,unafecha,unnombre);
+insert into pelicula (genero,fecha,nombre)
+values(ungenero,unafecha,unnombre);
 set  unidPelicula = LAST_INSERT_ID();
 end $$
 DELIMITER $$

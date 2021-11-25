@@ -18,10 +18,13 @@ namespace AdminConsola
 
             var menuListaSalas = new MenuListaSalas() { Nombre = "Listado Salas" };
             var menuAltaSala = new MenuAltaSala();
-
             var menuSala = new MenuCompuesto("Menu Sala", menuAltaSala, menuListaSalas);
 
-            var menuInicial = new MenuCompuesto("Menu Admin", menuSala);
+            var menuListaPeliculas = new MenuListaPeliculas(){ Nombre = "Listado Peliculas" };
+            var menuAltaPelicula = new MenuAltaPelicula();
+            var menuPelicula = new MenuCompuesto("Menu Pelicula", menuAltaPelicula,menuListaPeliculas);
+
+            var menuInicial = new MenuCompuesto("Menu Admin", menuSala, menuPelicula);
 
             menuInicial.mostrar();
         }
