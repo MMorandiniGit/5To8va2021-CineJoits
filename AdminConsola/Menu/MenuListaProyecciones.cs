@@ -9,7 +9,7 @@ namespace AdminConsola.Menu
     {
         public override void imprimirElemento(Proyeccion proyeccion)
         {
-            Console.WriteLine($"N°: {proyeccion.Sala}\t Genero: {proyeccion.Pelicula}\t Fecha: {proyeccion.Fechahora}");
+            Console.WriteLine($"N°: {proyeccion.Sala.Id}\t Nombre: {proyeccion.Pelicula.Nombre}\t Fecha: {proyeccion.Fechahora.ToShortDateString()}");
         }
 
         public override List<Proyeccion> obtenerLista() => Program.Ado.ObtenerProyecciones();
