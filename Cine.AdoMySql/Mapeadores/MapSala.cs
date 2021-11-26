@@ -42,13 +42,13 @@ namespace Cine.AdoMySql.Mapeadores
               .AgregarParametro();          
         }
 
-        internal Sala SalaPorId(short Id)
+        internal Sala SalaPorId(sbyte id)
         {
             SetComandoSP("SalaPorId");
 
             BP.CrearParametro("unidsala")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Byte)
-              .SetValor(Id)
+              .SetValor(id)
               .AgregarParametro();
             
             return ElementoDesdeSP();

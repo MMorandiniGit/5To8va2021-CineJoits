@@ -26,7 +26,7 @@ namespace Cine.AdoMySql.Mapeadores
         public override Proyeccion ObjetoDesdeFila(DataRow fila)
             => new Proyeccion()
             {
-                Sala = MapSala.SalaPorId(Convert.ToByte(fila["Id"])),
+                Sala = MapSala.SalaPorId(Convert.ToSByte(fila["id"])),
                 Pelicula =  MapPelicula.PeliculaPorId(Convert.ToString(fila["nombre"])),
                 Fechahora = Convert.ToDateTime(fila["fechaHora"])
             };
