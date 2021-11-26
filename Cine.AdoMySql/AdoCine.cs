@@ -16,13 +16,12 @@ namespace Cine.AdoMySql
             Ado = ado;
             MapPelicula = new MapPelicula(ado);
             MapSala = new MapSala(ado);
-            MapProyecciones = new MapProyecciones(ado);
+            MapProyecciones = new MapProyecciones(MapPelicula, MapSala);
         }
         public void AltaPelicula(Pelicula pelicula) => MapPelicula.AltaPelicula(pelicula);
         public List<Pelicula> ObtenerPeliculas() => MapPelicula.ObtenerPeliculas();
         public void AltaSala(Sala sala) => MapSala.AltaSala(sala);
         public List<Sala> ObtenerSalas() =>MapSala.ObtenerSalas();
-
         public List<Proyeccion> ObtenerProyecciones() => MapProyecciones.ObtenerProyecciones();
     }
 }

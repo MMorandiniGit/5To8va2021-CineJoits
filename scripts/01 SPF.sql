@@ -11,7 +11,7 @@ end $$
 
 CREATE PROCEDURE PeliculaPorId(unidPelicula smallint)
 BEGIN
-    SELECT idPelicula, Pelicula
+    SELECT *
     FROM Pelicula
     Where idPelicula = unidPelicula;
 END $$
@@ -35,7 +35,7 @@ end $$
 
 Create procedure SalaPorId(unidsala tinyint)
 BEGIN
-    SELECT idSala, sala
+    SELECT *
     from sala
     where idSala = unidsala;
 end $$
