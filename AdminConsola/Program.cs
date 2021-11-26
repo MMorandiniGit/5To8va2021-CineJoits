@@ -16,6 +16,9 @@ namespace AdminConsola
             var adoAGBD = FactoryAdoAGBD.GetAdoMySQL("appSettings.json", "admin");
             Ado = new AdoCine(adoAGBD);
 
+            var menuListaProyecciones = new MenuListaProyecciones() { Nombre = "Lista Proyecciones" };
+            var menuProyecciones = new MenuCompuesto("Menu Proyecciones", menuListaProyecciones);
+
             var menuListaSalas = new MenuListaSalas() { Nombre = "Listado Salas" };
             var menuAltaSala = new MenuAltaSala();
             var menuSala = new MenuCompuesto("Menu Sala", menuAltaSala, menuListaSalas);
@@ -24,7 +27,7 @@ namespace AdminConsola
             var menuAltaPelicula = new MenuAltaPelicula();
             var menuPelicula = new MenuCompuesto("Menu Pelicula", menuAltaPelicula,menuListaPeliculas);
 
-            var menuInicial = new MenuCompuesto("Menu Admin", menuSala, menuPelicula);
+            var menuInicial = new MenuCompuesto("Menu Admin", menuSala, menuPelicula, menuProyecciones);
 
             menuInicial.mostrar();
         }

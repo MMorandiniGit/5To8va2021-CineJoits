@@ -11,18 +11,25 @@ namespace Cine.AdoMySql.Mapeadores
     {
         public MapPelicula MapPelicula { get; set; }
         public MapSala MapSala { get; set; }
-        public override Proyeccion ObjetoDesdeFila(DataRow fila)
-            => new Proyeccion()
-            {
-                //TODO MapSala.SalaPorId()devuelve sala
-                //TODO MapPelicula.peliPorId() devuelve una peli
-                Fechahora = Convert.ToDateTime(fila["fechaHora"])
-            };
 
         public MapProyecciones(AdoAGBD ado):base(ado)
         {
             Tabla = "Proyeccion";
-        }
-        internal List<Proyeccion> ObtenerProyecciones() => ColeccionDesdeTabla();
+        } 
+
+        public MapProyecciones(MapPelicula mapPelicula):this(mapPelicula.AdoAGBD)
+            => MapPelicula = mapPelicula;
+
+        public MapProyecciones(MapSala mapSala): this(mapSala.AdoAGBD)
+            => MapSala = mapSala;
+
+        public override Proyeccion ObjetoDesdeFila(DataRow fila)
+            => new Proyeccion()
+            {
+                Sala = MapSala.SalaPorId(Convert.ToByte(fila["Id"])),
+                Pelicula =  MapPelicula.PeliculaPorId(Convert.ToString(fila["nombre"])),
+                Fechahora = Convert.ToDateTime(fila["fechaHora"])
+            };
+        public List<Proyeccion> ObtenerProyecciones() => ColeccionDesdeTabla();
     }
 }

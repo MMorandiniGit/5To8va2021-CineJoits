@@ -9,7 +9,7 @@ namespace AdminConsola.Menu
     {
         public override void imprimirElemento(Sala salas)
         {
-            Console.WriteLine($"N°:{salas.Id}\t\tPiso: {salas.Piso}\t\tCapacidad: {salas.Capacidad}");
+            Console.WriteLine($"N°:{salas.Id}\tPiso: {salas.Piso}\tCapacidad: {salas.Capacidad}");
         }
 
         public override List<Sala> obtenerLista() => Program.Ado.ObtenerSalas();

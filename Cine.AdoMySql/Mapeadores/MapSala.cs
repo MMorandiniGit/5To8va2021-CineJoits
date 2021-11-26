@@ -41,11 +41,23 @@ namespace Cine.AdoMySql.Mapeadores
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.UInt16)
               .AgregarParametro();          
         }
+
+        internal Sala SalaPorId(short Id)
+        {
+            SetComandoSP("SalaPorId");
+
+            BP.CrearParametro("unidsala")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Byte)
+              .SetValor(Id)
+              .AgregarParametro();
+            
+            return ElementoDesdeSP();
+        }
         public void PostAltaSala(Sala sala)
         {
             var paramIdSala=GetParametro("unidsala");
             sala.Id = Convert.ToSByte(paramIdSala.Value);
         }
-        internal List<Sala> ObtenerSalas() => ColeccionDesdeTabla();
+        public List<Sala> ObtenerSalas() => ColeccionDesdeTabla();
     }
 }

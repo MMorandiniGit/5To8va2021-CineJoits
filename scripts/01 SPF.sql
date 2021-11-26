@@ -8,6 +8,13 @@ insert into pelicula (genero,fecha,nombre)
 values(ungenero,unafecha,unnombre);
 set  unidPelicula = LAST_INSERT_ID();
 end $$
+
+CREATE PROCEDURE PeliculaPorId(unidPelicula smallint)
+BEGIN
+    SELECT idPelicula, Pelicula
+    FROM Pelicula
+    Where idPelicula = unidPelicula;
+END $$
 DELIMITER $$
 create procedure altaProyeccion (OUT unidProyeccion smallint,unidsala
 tinyint,unidpelicula smallint,unafechahora datetime)
@@ -24,6 +31,13 @@ begin
 insert into sala (piso,capacidad)
 values (unpiso,unacapacidad);
 set unidsala = LAST_INSERT_ID();
+end $$
+
+Create procedure SalaPorId(unidsala tinyint)
+BEGIN
+    SELECT idSala, sala
+    from sala
+    where idSala = unidsala;
 end $$
 /*Se pide hacer el SP ‘registrarCliente’ que reciba los datos del
 cliente.

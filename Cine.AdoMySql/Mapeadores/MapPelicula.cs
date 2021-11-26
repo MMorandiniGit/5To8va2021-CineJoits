@@ -48,6 +48,18 @@ namespace Cine.AdoMySql.Mapeadores
               .AgregarParametro();
         }
 
+        internal Pelicula PeliculaPorId(string id)
+        {
+            SetComandoSP("PeliculaPorId");
+
+            BP.CrearParametro("unidPelicula")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int16)
+              .SetValor(id)
+              .AgregarParametro();
+
+            return ElementoDesdeSP();  
+        }
+
         public void PostAltaPelicula(Pelicula pelicula)
         {
             var paramIdPelicula = GetParametro("unidPelicula");

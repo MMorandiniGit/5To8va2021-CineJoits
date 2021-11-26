@@ -9,7 +9,7 @@ namespace AdminConsola.Menu
     {
         public override void imprimirElemento(Pelicula pelicula)
         {
-            Console.WriteLine($"{pelicula.Id}\t\t{pelicula.Genero}\t\t{pelicula.Fecha}\t\t{pelicula.Nombre}");
+            Console.WriteLine($"N°: {pelicula.Id}\t Genero: {pelicula.Genero}\t Fecha: {pelicula.Fecha}\t Nombre: {pelicula.Nombre}");
         }
         public override List<Pelicula> obtenerLista() => Program.Ado.ObtenerPeliculas();
     }
