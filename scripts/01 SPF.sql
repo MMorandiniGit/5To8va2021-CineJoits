@@ -105,3 +105,14 @@ where entrada.idProyeccion= unidProyeccion
 and fecha between unaFechaUno and unaFechaDos;
 RETURN Recaudacion;
 end$$
+
+/*En base a un mail y una contraseña devuelve todas las columnas de cliente*/
+delimiter $$
+create procedure usuasriopormailypass (unmail varchar(45), unpass char(64))
+begin
+	select *
+	from cliente
+	where pass = sha2(unpass,256)
+	and mail = unmail
+	limit 1;
+end $$
