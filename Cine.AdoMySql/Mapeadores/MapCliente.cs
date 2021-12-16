@@ -21,6 +21,53 @@ namespace Cine.AdoMySql.Mapeadores
             Apellido = fila["apellido"].ToString(),
             Mail = fila["mail"].ToString()
         };
+        public void AltaCliente(Cliente cliente)
+        => EjecutarComandoCon("altaCliente",ConfigurarAltaCliente, PostAltaCliente, cliente);
+        public void ConfigurarAltaCliente(Cliente cliente)
+        {
+            SetComandoSP("altaCliente");
 
+            BP.CrearParametroSalida("unidCliente")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int16)
+              .AgregarParametro();
+
+            BP.CrearParametro("unnombre")
+              .SetValor(cliente.Nombre)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
+              .AgregarParametro();
+
+            BP.CrearParametro("unapellido")
+              .SetValor(cliente.Apellido)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
+              .AgregarParametro();
+
+             BP.CrearParametro("unmail")
+              .SetValor(cliente.Mail)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
+              .AgregarParametro(); 
+
+              BP.CrearParametro("unpass")
+              .SetValor(cliente.Pass)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
+              .AgregarParametro();
+        }
+        internal Cliente ClientePorId(string id)
+        {
+            SetComandoSP("ClientePorId");
+
+            BP.CrearParametro("unidCliente")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int16)
+              .SetValor(id)
+              .AgregarParametro();
+
+            return ElementoDesdeSP();  
+        }
+
+        public void PostAltaCliente(Cliente cliente)
+        {
+            var paramIdCliente = GetParametro("unidCliente");
+            cliente.Id = Convert.ToByte(paramIdCliente.Value);
+        }       
+        public List<Cliente> ObtenerCliente() => ColeccionDesdeTabla();
     }
 }

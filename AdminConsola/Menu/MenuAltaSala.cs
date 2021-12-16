@@ -11,7 +11,7 @@ namespace AdminConsola.Menu
 
         public MenuAltaSala():base("Alta sala")
         {
-
+            Nombre = "Alta Sala";
         }
 
         public override void mostrar()

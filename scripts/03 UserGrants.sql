@@ -7,12 +7,9 @@ Administrador:
 DROP USER IF EXISTS 'Administrador'@'%';
 CREATE USER 'Administrador'@'%' IDENTIFIED BY 'AdminPass';
 GRANT SELECT ON cine.* TO 'Administrador'@'%';
-GRANT INSERT ON cine.pelicula to 'Administrador'@'localhost';
 GRANT UPDATE ON cine.pelicula to 'Administrador'@'localhost';
-GRANT INSERT ON cine.proyeccion to 'Administrador'@'localhost';
 GRANT UPDATE ON cine.proyeccion to 'Administrador'@'localhost';
 GRANT INSERT ON cine.salas to 'Administrador'@'localhost';
-GRANT UPDATE ON cine.salas to 'Administrador'@'localhost';
 
 /*
 Cajero: desde la red 10.3.45.xxx puede ver todas las tablas y puede insertar filas nuevas en Entrada.
