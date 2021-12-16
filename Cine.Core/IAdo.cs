@@ -6,8 +6,10 @@ namespace Cine.Core
     {
         void AltaPelicula(Pelicula pelicula);
         void AltaSala(Sala sala);
+        void AltaCliente(Cliente cliente);
         List<Sala> ObtenerSalas();
         List<Pelicula> ObtenerPeliculas();
         List<Proyeccion> ObtenerProyecciones();
+        List<Cliente> ObtenerCliente();
     }
 }
