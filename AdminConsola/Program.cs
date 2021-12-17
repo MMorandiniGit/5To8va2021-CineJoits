@@ -16,6 +16,9 @@ namespace AdminConsola
             var adoAGBD = FactoryAdoAGBD.GetAdoMySQL("appSettings.json", "admin");
             Ado = new AdoCine(adoAGBD);
 
+            var menuListaCliente = new MenuListaClientes() { Nombre = "Lista Clientes"};
+            var menuAltaCliente = new MenuAltaCliente();
+
             var menuListaProyecciones = new MenuListaProyecciones() { Nombre = "Lista Proyecciones" };
             var menuProyecciones = new MenuCompuesto("Menu Proyecciones", menuListaProyecciones);
 

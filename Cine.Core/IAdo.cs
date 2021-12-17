@@ -10,6 +10,6 @@ namespace Cine.Core
         List<Sala> ObtenerSalas();
         List<Pelicula> ObtenerPeliculas();
         List<Proyeccion> ObtenerProyecciones();
-        List<Cliente> ObtenerCliente();
+        List<Cliente> ObtenerClientes();
     }
 }

@@ -11,6 +11,6 @@ namespace AdminConsola.Menu
         {
             Console.WriteLine($"N°: {cliente.Id}\t Nombre: {cliente.Nombre}\t Apellido: {cliente.Apellido}\t Mail: {cliente.Mail}\t Pass: {cliente.Pass}");
         }
-        public override List<Pelicula> obtenerLista() => Program.Ado.ObtenerPeliculas();
+        public override List<Cliente> obtenerLista() => Program.Ado.ObtenerClientes();
     }
 }

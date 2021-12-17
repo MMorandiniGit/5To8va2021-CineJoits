@@ -67,7 +67,7 @@ namespace Cine.AdoMySql.Mapeadores
         {
             var paramIdCliente = GetParametro("unidCliente");
             cliente.Id = Convert.ToByte(paramIdCliente.Value);
-        }       
-        public List<Cliente> ObtenerCliente() => ColeccionDesdeTabla();
+        }
+        public List<Cliente> ObtenerClientes() => ColeccionDesdeTabla();
     }
 }
