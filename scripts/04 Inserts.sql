@@ -7,13 +7,13 @@ insert into cliente (nombre,apellido,mail,pass)
                         ("Mariana","Gimenez","marugimenez@gmail.com","mariana123"),
                         ("Pedro","Aries","pepoaries@gmail.com","pepo123");
 
+insert into pelicula (genero,fecha,nombre)
+                values  ();
+                
 insert into proyeccion (idSala,idPelicula,fechahora)
                 values  ();
 
 insert into entrada (numeroentrada,idProyeccion,idCliente,)
-                values  ();
-
-insert into pelicula (genero,fecha,nombre)
                 values  ();
 
 insert into sala (idsala,piso,capacidad)

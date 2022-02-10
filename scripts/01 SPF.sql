@@ -1,6 +1,7 @@
 /*Se pide hacer los SP para dar de alta todas las entidades (menos
 Entrada y Cliente) con el prefijo ‘alta’.*/
 DELIMITER $$
+use cine $$
 create procedure altaPelicula (OUT unidPelicula smallint, ungenero
 varchar(45),unafecha date,unnombre varchar(45))
 begin
@@ -28,9 +29,10 @@ DELIMITER $$
 
 create procedure altaSala (OUT unidsala tinyint, unpiso tinyint, unacapacidad smallint)
 begin
-insert into sala (piso,capacidad)
-values (unpiso,unacapacidad);
-set unidsala = LAST_INSERT_ID();
+    insert into sala (piso,capacidad)
+    values (unpiso,unacapacidad);
+
+    set unidsala = LAST_INSERT_ID();
 end $$
 
 Create procedure SalaPorId(unidsala tinyint)
@@ -44,11 +46,13 @@ cliente.
 Es importante guardar encriptada la contraseña del cliente usando
 SHA256.*/
 DELIMITER $$
-create procedure registrarcliente (OUT idCliente smallint,unnombre varchar(45),unapellido
+create procedure registrarcliente (OUT unidCliente smallint,unnombre varchar(45),unapellido
 varchar(45),unmail varchar (60),unpass char(64))
 begin
-insert into cliente (nombre,apellido,mail,pass)
-values (unnombre,unapellido,unmail,sha2(unpass,256));
+    insert into cliente (nombre,apellido,mail,pass)
+    values (unnombre,unapellido,unmail,sha2(unpass,256));
+
+    set unidCliente = LAST_INSERT_ID();
 end $$
 /*Se pide hacer el SP ‘venderEntrada’ que reciba por parámetro el id de
 la función, valor e identificación del cliente.

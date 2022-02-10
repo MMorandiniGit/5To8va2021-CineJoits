@@ -1,4 +1,7 @@
+
 delimiter $$
+use cine $$
+drop trigger if exists verificarentrada $$
 create trigger verificarentrada before insert on entrada
 for each row 
 begin
@@ -24,7 +27,8 @@ begin
 end$$
 
 DELIMITER $$
-DROP TRIGGER IF exists AftPelicula;
+use cine $$
+DROP TRIGGER IF exists AftPelicula $$
 CREATE Trigger AftPelicula AFTER INSERT ON Pelicula
 for each row
 begin 

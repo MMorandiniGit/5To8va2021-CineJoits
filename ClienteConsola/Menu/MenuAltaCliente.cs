@@ -2,7 +2,7 @@ using System;
 using Cine.Core;
 using et12.edu.ar.MenuesConsola;
 
-namespace AdminConsola.Menu
+namespace ClienteConsola.Menu
 {
     public class MenuAltaCliente : MenuComponente
     {
@@ -19,10 +19,19 @@ namespace AdminConsola.Menu
             var apellido = prompt("Ingrese su apellido: ");
             var mail = prompt("Ingrese su mail: ");
             var pass = prompt("Ingrese su contraseña: ");
+
+            Cliente = new Cliente()
+            {
+                Nombre = nombre,
+                Apellido = apellido,
+                Mail = mail,
+                Pass = pass
+            };
+
             try
             {
                 Program.Ado.AltaCliente(Cliente);
-                Console.WriteLine("Se dio de alta la pelicula correctamente");
+                Console.WriteLine("Se dio de alta el cliente correctamente");
             }
             catch (Exception e)
             {

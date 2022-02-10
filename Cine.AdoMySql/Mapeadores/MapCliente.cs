@@ -16,16 +16,16 @@ namespace Cine.AdoMySql.Mapeadores
         public override Cliente ObjetoDesdeFila(DataRow fila)
             => new Cliente()
         {
-            Id = Convert.ToByte(fila["idPelicula"]),
+            Id = Convert.ToByte(fila["idCliente"]),
             Nombre = fila["nombre"].ToString(),
             Apellido = fila["apellido"].ToString(),
             Mail = fila["mail"].ToString()
         };
         public void AltaCliente(Cliente cliente)
-        => EjecutarComandoCon("altaCliente",ConfigurarAltaCliente, PostAltaCliente, cliente);
+        => EjecutarComandoCon("registrarcliente",ConfigurarAltaCliente, PostAltaCliente, cliente);
         public void ConfigurarAltaCliente(Cliente cliente)
         {
-            SetComandoSP("altaCliente");
+            SetComandoSP("registrarcliente");
 
             BP.CrearParametroSalida("unidCliente")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int16)

@@ -3,7 +3,7 @@ using et12.edu.ar.MenuesConsola;
 using Cine.Core;
 using System.Collections.Generic;
 
-namespace AdminConsola.Menu
+namespace ClienteConsola.Menu
 {
     public class MenuListaClientes : MenuListador<Cliente>
     {
