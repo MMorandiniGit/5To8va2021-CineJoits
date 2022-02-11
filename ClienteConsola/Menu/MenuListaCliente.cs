@@ -9,7 +9,7 @@ namespace ClienteConsola.Menu
     {
         public override void imprimirElemento(Cliente cliente)
         {
-            Console.WriteLine($"N°: {cliente.Id}\t Nombre: {cliente.Nombre}\t Apellido: {cliente.Apellido}\t Mail: {cliente.Mail}\t Pass: {cliente.Pass}");
+            Console.WriteLine($"N°: {cliente.Id}\t Nombre: {cliente.Nombre}\t Apellido: {cliente.Apellido}\t Mail: {cliente.Mail}\t  {cliente.Pass}");
         }
         public override List<Cliente> obtenerLista() => Program.Ado.ObtenerClientes();
     }

@@ -10,6 +10,8 @@ values(ungenero,unafecha,unnombre);
 set  unidPelicula = LAST_INSERT_ID();
 end $$
 
+delimiter $$
+use cine $$
 CREATE PROCEDURE PeliculaPorId(unidPelicula smallint)
 BEGIN
     SELECT *
@@ -17,6 +19,7 @@ BEGIN
     Where idPelicula = unidPelicula;
 END $$
 DELIMITER $$
+use cine $$
 create procedure altaProyeccion (OUT unidProyeccion smallint,unidsala
 tinyint,unidpelicula smallint,unafechahora datetime)
 begin
@@ -35,6 +38,8 @@ begin
     set unidsala = LAST_INSERT_ID();
 end $$
 
+delimiter $$
+use cine $$
 Create procedure SalaPorId(unidsala tinyint)
 BEGIN
     SELECT *
@@ -46,6 +51,7 @@ cliente.
 Es importante guardar encriptada la contraseña del cliente usando
 SHA256.*/
 DELIMITER $$
+use cine $$
 create procedure registrarcliente (OUT unidCliente smallint,unnombre varchar(45),unapellido
 varchar(45),unmail varchar (60),unpass char(64))
 begin
@@ -59,6 +65,7 @@ la función, valor e identificación del cliente.
 Pensar en cómo hacer para darle valores consecutivos desde 1 al número
 de entrada por función.*/
 DELIMITER $$
+use cine $$
 create procedure venderentrada (unnumero smallint,unidproyeccion
 smallint,unidcliente smallint,unvalor decimal(6,2))
 begin
@@ -75,7 +82,7 @@ entradas vendidas
 para la misma entre las 2 fechas. Ordenar por cantidad de entradas de
 mayor a menor.*/
 DELIMITER $$
-
+use cine $$
 CREATE Procedure TOP10 (in unaFechaUno date, in unaFechaDos date)
 begin
 select Pelicula.fecha, pelicula.idPelicula, pelicula.fecha,
@@ -95,6 +102,7 @@ identificador de película y 2 fechas,
 la función tiene que retornar la recaudación de la película entre esas
 2 fechas.*/
 DELIMITER $$
+use cine $$
 CREATE FUNCTION RecaudacionPara (unidProyeccion int, unaFechaUno date,
 unaFechaDos date) returns decimal(6,2) READS SQL DATA
 BEGIN
@@ -112,6 +120,7 @@ end$$
 
 /*En base a un mail y una contraseña devuelve todas las columnas de cliente*/
 delimiter $$
+use cine $$
 create procedure usuasriopormailypass (unmail varchar(45), unpass char(64))
 begin
 	select *

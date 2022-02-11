@@ -20,9 +20,7 @@ namespace ClienteConsola
             var menuAltaCliente = new MenuAltaCliente();
             var menuclientes = new MenuCompuesto("Menu cliente",menuAltaCliente, menuListaCliente);
 
-            var menuInicial = new MenuCompuesto("Crear usuario", menuclientes);
-
-            menuInicial.mostrar();
+            menuclientes.mostrar();
         }
     }
 }
