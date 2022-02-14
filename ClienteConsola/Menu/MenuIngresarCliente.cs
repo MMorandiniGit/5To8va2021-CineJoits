@@ -36,6 +36,10 @@ namespace ClienteConsola.Menu
                 Console.ReadKey();
             }
         }
-        
+        private void instanciarMenuesPara(cliente cliente)
+        {
+            var menuingrearcliente = new MenuIngresarCliente(cliente)
+            UsuarioPrincipal = new MenuCompuesto(menuingrearcliente) { Nombre = "Menu cliente"};
+        }
     }
 }
