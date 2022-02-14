@@ -11,5 +11,6 @@ namespace Cine.Core
         List<Pelicula> ObtenerPeliculas();
         List<Proyeccion> ObtenerProyecciones();
         List<Cliente> ObtenerClientes();
+        Cliente IngresarCliente(string mail, string pass);
     }
 }

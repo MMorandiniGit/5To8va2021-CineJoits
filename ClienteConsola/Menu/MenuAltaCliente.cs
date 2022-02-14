@@ -11,6 +11,8 @@ namespace ClienteConsola.Menu
         {
             Nombre = "Alta Cliente";
         }
+
+
         public override void mostrar()
         {
             base.mostrar();

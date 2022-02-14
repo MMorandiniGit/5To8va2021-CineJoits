@@ -4,22 +4,27 @@ using et12.edu.ar.MenuesConsola;
 
 namespace ClienteConsola.Menu
 {
-    public class MenuIngresarCliente
+    public class MenuIngresarCliente:MenuComponente
     {
+        public MenuIngresarCliente(Cliente cliente)
+        {
+            Cliente = cliente;
+        }
+
         private Cliente Cliente {get ; set; }
         private MenuCompuesto UsuarioPrincipal {get ; set ;}
 
         public override void mostrar()
         {
-            base.mostrar()
+            base.mostrar();
 
             var mail = prompt("Ingrese su mail: ");
             var pass = prompt("Ingrese su contraseña: ");
 
             try 
             {
-                Cliente = AdoCine.ado.ClientePorMailPass(mail, pass)
-                if(cliente is null)
+                Cliente = Program.Ado.IngresarCliente(mail, pass);
+                if(Cliente is null)
                 {
                     Console.WriteLine("Mail o contraseña incorrecta");
                     Console.ReadKey();
@@ -36,10 +41,10 @@ namespace ClienteConsola.Menu
                 Console.ReadKey();
             }
         }
-        private void instanciarMenuesPara(cliente cliente)
+        private void instanciarMenuesPara(Cliente cliente)
         {
-            var menuingrearcliente = new MenuIngresarCliente(cliente)
-            UsuarioPrincipal = new MenuCompuesto(menuingrearcliente) { Nombre = "Menu cliente"};
+            var menualtacliente = new MenuIngresarCliente(cliente);
+            UsuarioPrincipal = new MenuCompuesto(menualtacliente) { Nombre = "Menu cliente"};
         }
     }
 }

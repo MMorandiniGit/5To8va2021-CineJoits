@@ -51,6 +51,22 @@ namespace Cine.AdoMySql.Mapeadores
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
               .AgregarParametro();
         }
+
+        internal Cliente IngresarCliente(string mail, string pass)
+        {
+            SetComandoSP("Ingresar cliente");
+
+              BP.CrearParametro("unmail")
+              .SetValor(Cliente.mail)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
+              .AgregarParametro();
+
+              BP.CrearParametro("unpass")
+              .SetValor(Cliente.pass)
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
+              .AgregarParametro();
+        }
+
         internal Cliente ClientePorId(string id)
         {
             SetComandoSP("ClientePorId");

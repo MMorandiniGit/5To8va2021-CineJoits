@@ -27,5 +27,7 @@ namespace Cine.AdoMySql
         public List<Proyeccion> ObtenerProyecciones() => MapProyecciones.ObtenerProyecciones();
         public void AltaCliente(Cliente cliente) => MapCliente.AltaCliente(cliente);
         public List<Cliente> ObtenerClientes() => MapCliente.ObtenerClientes();
+
+        public Cliente IngresarCliente(string mail, string pass) => MapCliente.IngresarCliente(mail, pass);
     }
 }
