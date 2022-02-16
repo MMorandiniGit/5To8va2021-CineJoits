@@ -2,6 +2,7 @@ using System;
 using et12.edu.ar.MenuesConsola;
 using Cine.Core;
 using System.Collections.Generic;
+using AdminConsola;
 
 namespace ClienteConsola.Menu
 {

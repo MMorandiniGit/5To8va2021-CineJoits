@@ -5,6 +5,7 @@ using Cine.Core;
 using Cine;
 using Cine.AdoMySql;
 using et12.edu.ar.AGBD.Ado;
+using ClienteConsola.Menu;
 
 namespace AdminConsola
 {
@@ -16,7 +17,7 @@ namespace AdminConsola
             var adoAGBD = FactoryAdoAGBD.GetAdoMySQL("appSettings.json", "admin");
             Ado = new AdoCine(adoAGBD);
 
-            var menuListaProyecciones = new MenuListaProyecciones() { Nombre = "Lista Proyecciones" };
+            var menuListaProyecciones = new MenuListaProyecciones() { Nombre = "Listado Proyecciones" };
             var menuProyecciones = new MenuCompuesto("Menu Proyecciones", menuListaProyecciones);
 
             var menuListaSalas = new MenuListaSalas() { Nombre = "Listado Salas" };
@@ -27,7 +28,9 @@ namespace AdminConsola
             var menuAltaPelicula = new MenuAltaPelicula();
             var menuPelicula = new MenuCompuesto("Menu Pelicula", menuAltaPelicula,menuListaPeliculas);
 
-            var menuInicial = new MenuCompuesto("Menu Admin", menuSala, menuPelicula, menuProyecciones);
+            var menuListaClientes = new MenuListaClientes() {Nombre = "Listado de clientes" };
+
+            var menuInicial = new MenuCompuesto("Menu Admin", menuSala, menuPelicula, menuProyecciones,menuListaClientes);
 
             menuInicial.mostrar();
         }

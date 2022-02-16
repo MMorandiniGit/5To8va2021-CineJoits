@@ -1,7 +1,6 @@
-/*Se pide hacer los SP para dar de alta todas las entidades (menos
-Entrada y Cliente) con el prefijo ‘alta’.*/
 DELIMITER $$
 use cine $$
+drop procedure if exists altaPelicula;
 create procedure altaPelicula (OUT unidPelicula smallint, ungenero
 varchar(45),unafecha date,unnombre varchar(45))
 begin
@@ -12,6 +11,7 @@ end $$
 
 delimiter $$
 use cine $$
+drop procedure if exists PeliculaPorId;
 CREATE PROCEDURE PeliculaPorId(unidPelicula smallint)
 BEGIN
     SELECT *
@@ -20,6 +20,7 @@ BEGIN
 END $$
 DELIMITER $$
 use cine $$
+drop procedure if exists altaProyeccion;
 create procedure altaProyeccion (OUT unidProyeccion smallint,unidsala
 tinyint,unidpelicula smallint,unafechahora datetime)
 begin
@@ -29,7 +30,8 @@ set unidProyeccion = LAST_INSERT_ID();
 end$$
 
 DELIMITER $$
-
+use cine $$
+drop procedure if exists altaSala;
 create procedure altaSala (OUT unidsala tinyint, unpiso tinyint, unacapacidad smallint)
 begin
     insert into sala (piso,capacidad)
@@ -40,6 +42,7 @@ end $$
 
 delimiter $$
 use cine $$
+drop procedure if exists SalaPorId;
 Create procedure SalaPorId(unidsala tinyint)
 BEGIN
     SELECT *
@@ -52,6 +55,7 @@ Es importante guardar encriptada la contraseña del cliente usando
 SHA256.*/
 DELIMITER $$
 use cine $$
+drop procedure if exists registrarcliente;
 create procedure registrarcliente (OUT unidCliente smallint,unnombre varchar(45),unapellido
 varchar(45),unmail varchar (60),unpass char(64))
 begin
@@ -66,6 +70,7 @@ Pensar en cómo hacer para darle valores consecutivos desde 1 al número
 de entrada por función.*/
 DELIMITER $$
 use cine $$
+drop procedure if exists venderentrada;
 create procedure venderentrada (unnumero smallint,unidproyeccion
 smallint,unidcliente smallint,unvalor decimal(6,2))
 begin
@@ -83,6 +88,7 @@ para la misma entre las 2 fechas. Ordenar por cantidad de entradas de
 mayor a menor.*/
 DELIMITER $$
 use cine $$
+drop procedure if exists TOP10;
 CREATE Procedure TOP10 (in unaFechaUno date, in unaFechaDos date)
 begin
 select Pelicula.fecha, pelicula.idPelicula, pelicula.fecha,
@@ -103,6 +109,7 @@ la función tiene que retornar la recaudación de la película entre esas
 2 fechas.*/
 DELIMITER $$
 use cine $$
+drop function if exists RecaudacionPara;
 CREATE FUNCTION RecaudacionPara (unidProyeccion int, unaFechaUno date,
 unaFechaDos date) returns decimal(6,2) READS SQL DATA
 BEGIN
@@ -121,6 +128,7 @@ end$$
 /*En base a un mail y una contraseña devuelve todas las columnas de cliente*/
 delimiter $$
 use cine $$
+drop procedure if exists usuasriopormailypass;
 create procedure usuasriopormailypass (unmail varchar(45), unpass char(64))
 begin
 	select *

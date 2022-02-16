@@ -6,11 +6,6 @@ namespace ClienteConsola.Menu
 {
     public class MenuIngresarCliente:MenuComponente
     {
-        public MenuIngresarCliente(Cliente cliente)
-        {
-            Cliente = cliente;
-        }
-
         private Cliente Cliente {get ; set; }
         private MenuCompuesto UsuarioPrincipal {get ; set ;}
 
@@ -26,25 +21,29 @@ namespace ClienteConsola.Menu
                 Cliente = Program.Ado.IngresarCliente(mail, pass);
                 if(Cliente is null)
                 {
-                    Console.WriteLine("Mail o contraseña incorrecta");
-                    Console.ReadKey();
+                    Console.WriteLine("Mail o contraseña incorrecta");                    
                 }
                 else
                 {
-                    instanciarMenuesPara(Cliente);
-                    UsuarioPrincipal.mostrar();
+                    // instanciarMenuesPara(Cliente);
+                    // UsuarioPrincipal.mostrar();
+                    System.Console.WriteLine("Adentro");                    
                 }
+                Console.ReadKey();
             }
             catch (Exception e)
             {
-                Console.WriteLine($"No se pudo iniciar sesion debido a un error: {e.Message}");
+                Console.WriteLine($"No se pudo iniciar sesion debido a un error: {e.Message} - {e.StackTrace}");
                 Console.ReadKey();
             }
         }
         private void instanciarMenuesPara(Cliente cliente)
         {
-            var menualtacliente = new MenuIngresarCliente(cliente);
-            UsuarioPrincipal = new MenuCompuesto(menualtacliente) { Nombre = "Menu cliente"};
+            UsuarioPrincipal = new MenuCompuesto() { Nombre = "Menu cliente"};
+        }
+        public MenuIngresarCliente()
+        {
+            Nombre = "Ingresar cliente";
         }
     }
 }

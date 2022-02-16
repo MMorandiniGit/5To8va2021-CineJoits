@@ -15,10 +15,9 @@ namespace ClienteConsola
         {
             var adoAGBD = FactoryAdoAGBD.GetAdoMySQL("appSettings.json", "cliente");
             Ado = new AdoCine(adoAGBD);
-
-            var menuListaCliente = new MenuListaClientes() { Nombre = "Lista Clientes"};
             var menuAltaCliente = new MenuAltaCliente();
-            var menuclientes = new MenuCompuesto("Menu cliente",menuAltaCliente, menuListaCliente);
+            var menuIngresarCliente = new MenuIngresarCliente();
+            var menuclientes = new MenuCompuesto("Menu cliente",menuAltaCliente, menuIngresarCliente);
 
             menuclientes.mostrar();
         }

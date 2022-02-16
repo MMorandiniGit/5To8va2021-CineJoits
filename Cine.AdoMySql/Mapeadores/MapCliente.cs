@@ -4,6 +4,7 @@ using Cine.Core;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System;
 
 namespace Cine.AdoMySql.Mapeadores
 {
@@ -54,17 +55,28 @@ namespace Cine.AdoMySql.Mapeadores
 
         internal Cliente IngresarCliente(string mail, string pass)
         {
-            SetComandoSP("Ingresar cliente");
+            SetComandoSP("usuasriopormailypass");
 
               BP.CrearParametro("unmail")
-              .SetValor(Cliente.mail)
-              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
+              .SetValor(mail)
+              .SetTipoVarchar(45)
               .AgregarParametro();
 
               BP.CrearParametro("unpass")
-              .SetValor(Cliente.pass)
-              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.VarChar)
+              .SetValor(pass)
+              .SetTipoChar(64)
               .AgregarParametro();
+
+              Cliente cliente;
+              try
+              {
+                cliente = ElementoDesdeSP();
+              }
+              catch (Exception)
+              {
+                cliente = null;
+              }
+              return cliente;
         }
 
         internal Cliente ClientePorId(string id)
